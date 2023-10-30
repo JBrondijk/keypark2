@@ -1,0 +1,15 @@
+<div class="component-body">
+
+  <div class="loadercontainer" *ngIf="loading">
+    <div class="loader"></div>
+  </div>
+  <article class="details-panel" *ngIf="(animal$ | async) as animal">
+    <img class="main-img" src="{{animal.photoUrl}}" alt="Photo of {{animal.name}}">
+    <article>
+      <h1 class="main-text">Hi, I'm a {{animal.name}}</h1>
+      <h2> <span class="emphasize">{{animal.scientificName}}</span></h2>
+      <p>{{animal.description}}</p>
+      <p>I live in <span class="emphasize">{{animal.location}}</span></p>
+    </article>
+  </article>
+</div>

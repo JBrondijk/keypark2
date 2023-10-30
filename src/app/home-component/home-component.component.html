@@ -1,0 +1,21 @@
+<div class="home-banner">
+    <br><br><br>
+    <h1 style="text-align:center; color:white">HOME BANNER</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h2>Welcome to Keypark Zoo!</h2>
+            <p> placeholder text</p>
+        </div>
+        <div class="col-md">
+            <h2>Plan your visit!</h2>
+            <p>Limited timeslots available, make a reservation here.</p>
+        </div>
+        <div class="col-md">
+            <h2>Have you met this animal?</h2>
+            <app-animal-card [index]="animalsService.getRandomAnimalIndex()"
+            [animal]="animalsService.animals[animalsService.getRandomAnimalIndex()]"></app-animal-card>
+        </div>
+    </div>
+</div>

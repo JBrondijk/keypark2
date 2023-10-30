@@ -1,0 +1,66 @@
+.animal-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 300px;
+    overflow:hidden;
+    height: 400px;
+    position: relative;
+  }
+
+    .animal-img-container {
+    overflow:hidden;
+    height: 150px;
+    display: flex;
+    align-items:center;
+    }
+
+    .animal-scientific-name{
+      font-weight: 100;
+      margin-block-start: 0;
+      font-style: italic;
+        }
+
+  .animal-img {
+    width: 300px;
+  }
+
+  .animal-description, .animal-headline, .animal-learn-more {
+    padding: 10px;
+    margin:0;
+    font-size: 12pt;
+    font-weight: 300;
+  }
+
+  .animal-description {
+    border-collapse:separate;
+    border-spacing:0 10px;
+  }
+
+  .animal-learn-more{
+    background-color: var(--keyparkGreen);
+    text-align: center;
+    border-radius: 25px;
+    width: fit-content;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    bottom: 0;
+    font-weight: 600;
+  }
+
+  a:-webkit-any-link{
+    color:white;
+    text-decoration: none;
+  }
+
+  .animal-headline {
+    font-size: 15pt;
+    background-color: var(--keyparkGreen);
+    color: white;
+    font-weight: 600;
+    white-space: nowrap;
+  }

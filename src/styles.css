@@ -1,1 +1,142 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --keyparkGreen: #1abc9c;
+    --keyparkGreenLight: #3dd1b3;
+    --keyparkGreenDark: #2e524a;
+  }
+
+body{
+    margin:0;
+}
+
+h1, h2, h3, h4, h5, h5, p, a, table {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;}
+
+.banner{
+    background: #1abc9c;
+    color: white;   
+    padding: 5px;
+}
+
+.banner h1 {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.banner a {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-decoration:none;
+}
+
+.banner a :hover {
+    color:#0e4d40;
+    background-color: blue;
+}
+
+.loadercontainer{
+    position: absolute;
+    top:0px;
+    right:0px;
+    display:flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid var(--keyparkGreen);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .component-body{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .dropbtn {
+    background-color: var(--keyparkGreen);
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 28px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: var(--keyparkGreenLight);}
+
+  .dropdown-banner {
+    position: static;
+    display: inline-block;
+  }
+
+  .dropdown-banner-content {
+    margin-top: 8px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: all 0.5s;
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .dropdown-banner-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-banner-content a:hover {background-color: #ddd;}
+  
+  .dropdown-banner:hover .dropdown-banner-content {max-height: 1000px; z-index: 2;}
+  
+  .dropdown-banner:hover .dropbtn {background-color: var(--keyparkGreenLight);}

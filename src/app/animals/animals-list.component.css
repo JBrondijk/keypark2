@@ -1,0 +1,19 @@
+.animal-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 10px;
+  }
+
+  .hero-text {
+    font-size: 25pt;
+    padding: 10px;
+  }
+
+.animal-search{
+  all: unset;
+  background-color: white;
+  border: 0;
+  font-family: 'Poppins', sans-serif;
+  width: 50%;
+}

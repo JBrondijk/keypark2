@@ -1,0 +1,39 @@
+<div class="component-body">
+    <div class="loadercontainer" *ngIf="loading">
+        <div class="loader"></div>
+    </div>
+    <section class="animal-section">
+        <h2>Meet our animals: </h2>
+        <a><input type="text" placeholder="Search..." class="animal-search" #animalSearch (keyup)="setAnimalSearch(animalSearch.value)"></a>
+        <div class="dropdown">
+            <button class="dropbtn">Filter by region</button>
+            <div class="dropdown-content">
+                <div *ngFor="let location of locations">
+                    <input type="checkbox" (change)="updateLocationFilter(location)">
+                    <label> {{location}}</label><br>
+                </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Filter by zoo area</button>
+            <div class="dropdown-content">
+                <div *ngFor="let area of zooAreas">
+                    <input type="checkbox" (change)="updateAreaFilter(area)">
+                    <label> {{area}}</label><br>
+                </div>
+            </div>
+          </div>
+    </section>
+    <article class="animal-list">
+        <app-animal-card *ngFor="let animal of filteredAnimals; let i = index"[index]="i" [animal]="animal"></app-animal-card>
+    </article>
+    <article *ngIf="filteredAnimals.length<1">
+        <p>nothing found for search "{{animalSearch.value}}" 
+            <a *ngIf="locationfilter.length>0||areafilter.length>0">and filters 
+                <a *ngFor="let location of locationfilter.concat(areafilter) let first = first; let last = last "><a *ngIf="!first&&!last">, </a><a *ngIf="last&&!first"> & </a>{{location}}</a>
+            </a>
+        </p>
+    </article>
+</div>
+
+

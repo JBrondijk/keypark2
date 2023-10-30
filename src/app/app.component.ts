@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AnimalsService } from './animals/animals.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private animalsService : AnimalsService){}
   title = 'keypark2';
 }

@@ -1,0 +1,22 @@
+<article class="animal-card">
+    <div class="loader" *ngIf="!animal"></div>
+    <div *ngIf="animal">
+        <div class="animal-img-container">
+            <img class="animal-img" src="{{animal.photoUrl}}" alt="Photo of the {{animal.name}}">
+        </div>
+
+        <p class="animal-headline">{{animal.name}}</p>
+        <table class="animal-description">
+            <tr class="animal-scientific-name">({{animal.scientificName}})</tr>
+            <tr><a style="font-weight:500;">Status: </a> 
+                <a>{{animal.iucnStatus}}</a>
+            </tr>
+            <tr><a style="font-weight:500;">Location: </a>
+                <a *ngFor="let location of animal.location; let first = first; let last = last">
+                    <a *ngIf="!first&&!last">, </a><a *ngIf="last&&!first"> & </a>{{location}}
+                </a> 
+            </tr>
+        </table>
+        <p class="animal-learn-more"><a href="/details/{{index}}">Learn More</a></p>
+    </div>
+</article>
