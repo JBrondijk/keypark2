@@ -23,7 +23,7 @@ import { TicketsReservationsComponent } from './page-visitor-info/tickets-reserv
 import { YoutubeComponent } from './page-visitor-info/youtube/youtube.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponentComponent},
+  {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path:'home', component: HomeComponentComponent},
   {path: 'details/:index', loadComponent: () => import('./animals/animal-view.component').then(m => m.AnimalViewComponent)},
   {path: 'education', component: PageEducationComponent},
