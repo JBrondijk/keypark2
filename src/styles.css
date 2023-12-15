@@ -89,6 +89,8 @@ h1, h2, h3, h4, h5, h5, p, a, table {
   }
   
   .dropdown-content {
+    padding-left: 10px;
+    padding-right: 10px;
     display: none;
     position: absolute;
     background-color: #f1f1f1;
