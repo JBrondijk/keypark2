@@ -26,10 +26,12 @@ export class AnimalsListComponent implements OnInit, OnDestroy{
   private _animalSearch: string = '';
 
   ngOnInit(): void  {
+    this.loading = (this.filteredAnimals.length == 0);
     this.subscriptions.add(this.animalsService.getSheetData().subscribe(data =>{
       this.animals = this.animalsService.sheetDataToArray(data);
       this.performFilter();
       this.loading = false;
+      console.log("false");
       this.locations = this.animalsService.getAllLocations();
       this.zooAreas = this.animalsService.getAllZooAreas();
     }))
