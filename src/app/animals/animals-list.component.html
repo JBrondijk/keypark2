@@ -25,7 +25,7 @@
           </div>
     </section>
     <article class="animal-list">
-        <app-animal-card *ngFor="let animal of filteredAnimals; let i = index"[index]="i" [animal]="animal"></app-animal-card>
+        <app-animal-card *ngFor="let animal of filteredAnimals"[index]="getAnimalIndex(animal)" [animal]="animal"></app-animal-card>
     </article>
     <article *ngIf="filteredAnimals.length<1">
         <p>nothing found for search "{{animalSearch.value}}" 

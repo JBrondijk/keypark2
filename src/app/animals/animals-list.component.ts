@@ -77,6 +77,10 @@ export class AnimalsListComponent implements OnInit, OnDestroy{
       this.areafilter.includes(animal.zoolocation))
     } 
   }
+
+  getAnimalIndex(animal: Animal): Number {
+    return this.animals?.indexOf(animal)!
+  }
 }
 
 
