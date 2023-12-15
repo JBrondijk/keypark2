@@ -25,7 +25,7 @@
     "csvparser": "^0.1.4",
     "rxjs": "^7.8.1",
     "tslib": "^2.6.2",
-    "zone.js": "^0.14.0"
+    "zone.js": "^0.13.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.7",
@@ -38,6 +38,6 @@
     "karma-coverage": "^2.2.1",
     "karma-jasmine": "^5.1.0",
     "karma-jasmine-html-reporter": "^2.1.0",
-    "typescript": "^5.2.2"
+    "typescript": "^4.0.0"
   }
 }
