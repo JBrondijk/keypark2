@@ -8,10 +8,9 @@
                 <h2>Meet our animals: </h2>
             </div>
             <div class="row">
-                <div class="col-7"><a><input type="text" placeholder="Search..." class="animal-search" #animalSearch
+                <div class="col-6"><a><input type="text" placeholder="Search..." class="animal-search" #animalSearch
                             (keyup)="setAnimalSearch(animalSearch.value)"></a></div>
-                <div class="col-5">
-                    <div class="dropdown">
+                    <div class="dropdown col-3">
                         <button class="dropbtn">Filter by region</button>
                         <div class="dropdown-content">
                             <div *ngFor="let location of locations">
@@ -20,7 +19,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="dropdown">
+                    <div class="dropdown col-3">
                         <button class="dropbtn">Filter by zoo area</button>
                         <div class="dropdown-content">
                             <div *ngFor="let area of zooAreas">
@@ -29,11 +28,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+</div>
             <div class="row">
-                <article class="animal-list">
-                    <app-animal-card *ngFor="let animal of filteredAnimals" [index]="getAnimalIndex(animal)"
+                <article class="animal-list col-sm-12 col-md-6 col-lg-4 col-xxl-3" *ngFor="let animal of filteredAnimals">
+                    <app-animal-card [index]="getAnimalIndex(animal)"
                         [animal]="animal"></app-animal-card>
                 </article>
                 <article *ngIf="filteredAnimals.length<1">

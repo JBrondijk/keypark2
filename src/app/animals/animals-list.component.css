@@ -1,7 +1,4 @@
 .animal-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; 
     padding: 10px;
   }
 
@@ -16,4 +13,9 @@
   border: 0;
   font-family: 'Poppins', sans-serif;
   width: 50%;
+}
+
+.dropbtn {
+  font-size: 20px;
+  width: 100%;
 }
