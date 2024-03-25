@@ -21,12 +21,14 @@ import { PracticalInformationComponent } from './page-visitor-info/practical-inf
 import { SubscriptionsComponent } from './page-visitor-info/subscriptions/subscriptions.component';
 import { TicketsReservationsComponent } from './page-visitor-info/tickets-reservations/tickets-reservations.component';
 import { YoutubeComponent } from './page-visitor-info/youtube/youtube.component';
+import { YakComponent } from './page-education/yak/yak.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path:'home', component: HomeComponentComponent},
   {path: 'details/:index', loadComponent: () => import('./animals/animal-view.component').then(m => m.AnimalViewComponent)},
   {path: 'education', component: PageEducationComponent},
+  {path: 'education/yak', component: YakComponent},
   {path: 'education/ufunguo', component: UfunguoComponent},
   {path: 'education/no-panda-pets', component: NoPandaPetsComponent},
   {path: 'education/local', component: LocalComponent},
