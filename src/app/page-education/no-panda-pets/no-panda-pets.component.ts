@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './no-panda-pets.component.html',
-  styleUrls: ['./no-panda-pets.component.css']
+  styleUrls: ['./no-panda-pets.component.scss']
 })
 export class NoPandaPetsComponent {
 

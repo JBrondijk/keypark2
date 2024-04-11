@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './subscriptions.component.html',
-  styleUrls: ['./subscriptions.component.css']
+  styleUrls: ['./subscriptions.component.scss']
 })
 export class SubscriptionsComponent {
 

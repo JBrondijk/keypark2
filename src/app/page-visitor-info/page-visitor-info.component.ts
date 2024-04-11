@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './page-visitor-info.component.html',
-  styleUrls: ['./page-visitor-info.component.css']
+  styleUrls: ['./page-visitor-info.component.scss']
 })
 export class PageVisitorInfoComponent {
 

@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './page-impression.component.html',
-  styleUrls: ['./page-impression.component.css']
+  styleUrls: ['./page-impression.component.scss']
 })
 export class PageImpressionComponent {
 

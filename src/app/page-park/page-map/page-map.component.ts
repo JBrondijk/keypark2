@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './page-map.component.html',
-  styleUrls: ['./page-map.component.css']
+  styleUrls: ['./page-map.component.scss']
 })
 export class PageMapComponent {
 

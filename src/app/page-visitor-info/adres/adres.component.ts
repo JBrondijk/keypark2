@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './adres.component.html',
-  styleUrls: ['./adres.component.css']
+  styleUrls: ['./adres.component.scss']
 })
 export class AdresComponent {
 

@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './animal-card.component.html',
-  styleUrls: ['./animal-card.component.css']
+  styleUrls: ['./animal-card.component.scss']
 })
 export class AnimalCardComponent {
   @Input() animal!: Animal;

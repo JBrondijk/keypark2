@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './practical-information.component.html',
-  styleUrls: ['./practical-information.component.css']
+  styleUrls: ['./practical-information.component.scss']
 })
 export class PracticalInformationComponent {
 

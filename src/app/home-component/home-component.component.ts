@@ -9,7 +9,7 @@ import { Animal, AnimalsService } from '../animals/animals.service';
   standalone: true,
   imports: [CommonModule,AnimalCardComponent],
   templateUrl: './home-component.component.html',
-  styleUrls: ['./home-component.component.css']
+  styleUrls: ['./home-component.component.scss']
 })
 
 

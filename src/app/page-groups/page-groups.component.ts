@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './page-groups.component.html',
-  styleUrls: ['./page-groups.component.css']
+  styleUrls: ['./page-groups.component.scss']
 })
 export class PageGroupsComponent {
 

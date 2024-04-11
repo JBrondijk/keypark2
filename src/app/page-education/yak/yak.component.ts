@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './yak.component.html',
-  styleUrls: ['./yak.component.css']
+  styleUrls: ['./yak.component.scss']
 })
 export class YakComponent {
 

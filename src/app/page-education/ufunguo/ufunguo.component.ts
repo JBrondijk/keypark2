@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './ufunguo.component.html',
-  styleUrls: ['./ufunguo.component.css']
+  styleUrls: ['./ufunguo.component.scss']
 })
 export class UfunguoComponent {
 

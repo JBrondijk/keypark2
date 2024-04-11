@@ -9,7 +9,7 @@ import { Observable, Subscription } from 'rxjs';
   standalone: true,
   imports: [CommonModule, AnimalCardComponent],
   templateUrl: './animals-list.component.html',
-  styleUrls: ['./animals-list.component.css']
+  styleUrls: ['./animals-list.component.scss']
 })
 
 export class AnimalsListComponent implements OnInit, OnDestroy{

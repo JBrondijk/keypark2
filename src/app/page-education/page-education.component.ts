@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './page-education.component.html',
-  styleUrls: ['./page-education.component.css']
+  styleUrls: ['./page-education.component.scss']
 })
 export class PageEducationComponent {
 

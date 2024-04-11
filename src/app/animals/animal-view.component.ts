@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './animal-view.component.html',
-  styleUrls: ['./animal-view.component.css']
+  styleUrls: ['./animal-view.component.scss']
 })
 export class AnimalViewComponent implements OnInit, OnDestroy {
   animal$!: Observable<Animal | undefined>;

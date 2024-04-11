@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './tickets-reservations.component.html',
-  styleUrls: ['./tickets-reservations.component.css']
+  styleUrls: ['./tickets-reservations.component.scss']
 })
 export class TicketsReservationsComponent {
 

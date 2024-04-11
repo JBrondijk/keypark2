@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './page-park.component.html',
-  styleUrls: ['./page-park.component.css']
+  styleUrls: ['./page-park.component.scss']
 })
 export class PageParkComponent {
 
