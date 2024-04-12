@@ -12,20 +12,16 @@ export class AppComponent implements OnInit{
   title = 'keypark2';
 
   ngOnInit(){
-    this.isMobile = window.innerWidth < 768;
+    this.isMobile = window.innerWidth < 992;
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: { target: { innerWidth: number; }; }) {
-    this.isMobile = event.target.innerWidth < 768;
+    this.isMobile = event.target.innerWidth < 992;
   }
 
   collapseNavbar() {
     const navbar: HTMLElement = document.getElementById('myNavbar')!;
     navbar.classList.remove('show');
-  }
-
-  isNotMobile() {
-    return window.innerWidth >= 768;
   }
 }
