@@ -1,121 +1,127 @@
-<!-- <div class="banner">
+<!-- 
+    TODO:
+        - Close dropdown menu on clicking a link.
+        - Fix "shadow" of dropdown on the navbar when the dropdown is closed.
+        - Add a footer.
+ -->
+
+<div class="bg-primary navbarBottom">
+
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <a routerLink="/home">
-                    <h1 class="logo">KEYPARK ZOO</h1>
-                </a>
-            </div>
-            <div class="col-8">
-                <div class="dropdown-banner">
-                    <a routerLink="/park" class="dropbtn">Park
-                        <i class="fa fa-caret-down"></i>
+        <a class="navbar-brand" href="#" (click)="collapseNavbar()">
+            <h1 class="logo">KEYPARK ZOO </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
+            aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav">
+                <li [ngClass]="{'nav-item': true,'dropdown':isNotMobile()}">
+                    <a class="nav-link navbarText" routerLink="/park" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" (click)="collapseNavbar()">
+                        Park
                     </a>
-                    <div class="dropdown-banner-content">
+                    <div class="dropdownIndicatorContainer">
+                        <div class="dropdown-indicator d-md-block"></div>
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <div class="container">
                             <div class="row">
-                                <a routerLink="/park/animals">Animals</a>
-                                <a routerLink="/park/map">Map</a>
-                                <a routerLink="/park/impression">Impression</a>
+                                <li><a routerLink="/park/animals">Animals</a></li>
+                                <li><a routerLink="/park/map">Map</a></li>
+                                <li><a routerLink="/park/impression">Impression</a></li>
                             </div>
                         </div>
-                    </div>
-                </div> 
-                <div class="dropdown-banner">
-                    <a routerLink="/info" class="dropbtn">Visitor Info
-                        <i class="fa fa-caret-down"></i>
+                    </ul>
+                </li>
+                <li [ngClass]="{'nav-item': true,'dropdown':!isMobile}">
+                    <a class="nav-link navbarText" routerLink="/info" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" (click)="collapseNavbar()">
+                        Visitor Info
                     </a>
-                    <div class="dropdown-banner-content">
+                    <div class="dropdownIndicatorContainer">
+                        <div class="dropdown-indicator d-md-block"></div>
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <a routerLink="/info/adres">Adress & Route</a>
-                                    <a routerLink="/info/tickets">Tickets & Reservations</a>
-                                    <a routerLink="/info/subscriptions">Subscriptions</a>
+                                    <li><a routerLink="/info/adres">Adress & Route</a></li>
+                                    <li><a routerLink="/info/tickets">Tickets & Reservations</a></li>
+                                    <li><a routerLink="/info/subscriptions">Subscriptions</a></li>
                                 </div>
                                 <div class="col">
-                                    <a routerLink="/info/practical">Practical Information</a>
-                                    <a routerLink="/info/contact">Contact</a>
-                                    <a routerLink="/info/youtube"> YouTube</a>
+                                    <li><a routerLink="/info/practical">Practical Information</a></li>
+                                    <li><a routerLink="/info/contact">Contact</a></li>
+                                    <li><a routerLink="/info/youtube"> YouTube</a></li>
                                 </div>
 
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="dropdown-banner">
-                    <a routerLink="/education" class="dropbtn">Education
-                        <i class="fa fa-caret-down"></i>
+                    </ul>
+                </li>
+                <li [ngClass]="{'nav-item': true,'dropdown':!isMobile}">
+                    <a class="nav-link navbarText" routerLink="/education" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" (click)="collapseNavbar()">
+                        Education
                     </a>
-                    <div class="dropdown-banner-content">
+                    <div class="dropdownIndicatorContainer">
+                        <div class="dropdown-indicator d-md-block"></div>
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <a routerLink="/education/yak">You Are Key! (YAK)</a>
+                                    <li><a routerLink="/education/yak">You Are Key! (YAK)</a></li>
+                                </div>
+                                <div class="col">
+                                    <li><a routerLink="/education/ufunguo">Ufunguo</a></li>
+                                    <li><a routerLink="/education/no-panda-pets">No Panda Pets</a></li>
+                                    <li><a routerLink="/education/local">Local initiatives</a></li>
+                                </div>
 
-                                </div>
-                                <div class="col">
-                                    <a routerLink="/education/ufunguo">Ufunguo</a>
-                                    <a routerLink="/education/no-panda-pets">No Panda Pets</a>
-                                    <a routerLink="/education/local">Local initiatives</a>
-                                </div>
-                                
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="dropdown-banner">
-                    <a routerLink="/groups" class="dropbtn">Groups
-                        <i class="fa fa-caret-down"></i>
+                    </ul>
+                </li>
+                <li [ngClass]="{'nav-item': true,'dropdown':!isMobile}">
+                    <a class="nav-link navbarText" routerLink="/groups" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" (click)="collapseNavbar()">
+                        Groups
                     </a>
-                    <div class="dropdown-banner-content">
+                    <div class="dropdownIndicatorContainer">
+                        <div class="dropdown-indicator d-md-block"></div>
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <div class="container">
                             <div class="row">
-                                <a routerLink="/groups/business">Business</a>
-                                <a routerLink="/groups/schools">Schools</a>
-                                <a routerLink="/groups/birthdays">Birthdays</a>
+                                <div class="col">
+                                    <li><a routerLink="/groups/business">Business</a></li>
+                                    <li><a routerLink="/groups/schools">Schools</a></li>
+                                    <li><a routerLink="/groups/birthdays">Birthdays</a></li>
+                                </div>
+                                <div class="col">
+                                   
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                </div> 
-                <a routerLink="/info/tickets" class="ticketbtn"> tickets </a>
-            </div>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbarText" routerLink="/info/tickets" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" (click)="collapseNavbar()">
+                        Tickets
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
-</div> -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Default</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav" style="--bs-scroll-height: 100px;">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Link
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+</nav>
 <div style="text-align: center; font-weight: 700; background-color: rgb(254, 204, 22); padding: 10px;">
-   <img src="assets/construction.svg" style="height: 25px;"/> UNDER CONSTRUCTION
+    <img src="assets/construction.svg" style="height: 25px;" /> UNDER CONSTRUCTION
 </div>
 <router-outlet></router-outlet>

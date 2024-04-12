@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnimalCardComponent } from '../animals/animal-card.component';
-import { Animal, AnimalsService } from '../animals/animals.service';
+import { AnimalsService } from '../animals/animals.service';
 
 
 @Component({
