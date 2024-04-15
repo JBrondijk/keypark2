@@ -26,7 +26,7 @@ import { YakComponent } from './page-education/yak/yak.component';
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path:'home', component: HomeComponentComponent},
-  {path: 'details/:index', loadComponent: () => import('./animals/animal-view.component').then(m => m.AnimalViewComponent)},
+  {path: 'park/animals/:index', loadComponent: () => import('./animals/animal-view.component').then(m => m.AnimalViewComponent)},
   {path: 'education', component: PageEducationComponent},
   {path: 'education/yak', component: YakComponent},
   {path: 'education/ufunguo', component: UfunguoComponent},
