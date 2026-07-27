@@ -27,26 +27,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td data-label="Date">September 16, 2023</td>
-                            <td data-label="Celebration">International Red Panda Day</td>
-                            <td data-label="Raised"><span class="amount-pill">$ 184</span></td>
-                            <td data-label="Cause">Red Panda Network</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Date">April 20, 2024</td>
-                            <td data-label="Celebration">Earth Day</td>
-                            <td data-label="Raised"><span class="amount-pill">£ 108</span></td>
-                            <td data-label="Cause">WWF UK</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Date">September 20, 2025</td>
-                            <td data-label="Celebration">International Red Panda Day</td>
-                            <td data-label="Raised"><span class="amount-pill">$ 1050</span></td>
-                            <td data-label="Cause">Red Panda Network</td>
+                        <tr *ngFor="let fundraiser of fundraisers">
+                            <td data-label="Date">{{ fundraiser.date }}</td>
+                            <td data-label="Celebration">{{ fundraiser.celebration }}</td>
+                            <td data-label="Raised"><span class="amount-pill">{{ fundraiser.currency }} {{ fundraiser.amount | number:'1.0-0' }}</span></td>
+                            <td data-label="Cause">{{ fundraiser.cause }}</td>
                         </tr>
                     </tbody>
                 </table>
+                <p class="total-raised">Total raised: <span class="amount-pill">$ {{ totalRaisedUsd | number:'1.0-0' }}</span></p>
             </div>
         </div>
         <div class="page-section">
