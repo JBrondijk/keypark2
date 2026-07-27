@@ -1,6 +1,5 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AnimalViewComponent } from './animals/animal-view.component';
 import { AnimalsListComponent } from './animals/animals-list.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { LocalComponent } from './page-education/local/local.component';
@@ -29,6 +28,7 @@ export const routes: Routes = [
   {path: 'park/animals/:index', loadComponent: () => import('./animals/animal-view.component').then(m => m.AnimalViewComponent)},
   {path: 'education', component: PageEducationComponent},
   {path: 'education/ufunguo', component: UfunguoComponent},
+  {path: 'ufunguo', redirectTo: '/education/ufunguo'},
   {path: 'education/no-panda-pets', component: NoPandaPetsComponent},
   {path: 'education/local', component: LocalComponent},
   {path: 'park', component: PageParkComponent},
