@@ -23,8 +23,8 @@ import { TicketsReservationsComponent } from './page-visitor-info/tickets-reserv
 import { YoutubeComponent } from './page-visitor-info/youtube/youtube.component';
 import { YakComponent } from './page-education/yak/yak.component';
 
-const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'home'},
+export const routes: Routes = [
+  {path: '', pathMatch: 'full', redirectTo: '/home'},
   {path:'home', component: HomeComponentComponent},
   {path: 'park/animals/:index', loadComponent: () => import('./animals/animal-view.component').then(m => m.AnimalViewComponent)},
   {path: 'education', component: PageEducationComponent},
@@ -46,7 +46,8 @@ const routes: Routes = [
   {path: 'groups', component: PageGroupsComponent},
   {path: 'groups/business', component: BusinessComponent},
   {path: 'groups/schools', component: SchoolsComponent},
-  {path: 'groups/birthdays', component: BirthdaysComponent}
+  {path: 'groups/birthdays', component: BirthdaysComponent},
+  {path: '**', redirectTo: '/home'}
 ];
 
 @NgModule({

@@ -8,9 +8,9 @@
                 <h2>Meet our animals: </h2>
             </div>
             <div class="row">
-                <div class="col-6"><a><input type="text" placeholder="Search..." class="animal-search" #animalSearch
-                            (keyup)="setAnimalSearch(animalSearch.value)"></a></div>
-                    <div class="dropdown col-3">
+                <div class="col"><a><input type="text" placeholder="Search..." class="animal-search" #animalSearch
+                            (keyup)="setAnimalSearch(animalSearch.value)"></a>
+                    <!-- <div class="dropdown col-3">
                         <button class="dropbtn">Filter by region</button>
                         <div class="dropdown-content">
                             <div *ngFor="let location of locations">
@@ -27,6 +27,32 @@
                                 <label> &nbsp; {{area}}</label><br>
                             </div>
                         </div>
+                    </div> -->
+                        <div class="dropdown">
+                            <button class="btn btn-primary text-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Filter
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><span class="dropdown-item-text">Area:</span></li>
+                                <div *ngFor="let area of zooAreas">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" (change)="updateAreaFilter(area)" value="" id="flexCheckArea" >
+                                        <label class="form-check-label" for="flexCheckIndeterminate">
+                                            {{area}}
+                                        </label>
+                                      </div>
+                                </div>
+                                <li><span class="dropdown-item-text">Location:</span></li>
+                                <div *ngFor="let location of locations">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" (change)="updateLocationFilter(location)" value="" id="flexCheckLocation" >
+                                        <label class="form-check-label" for="flexCheckIndeterminate">
+                                            {{location}}
+                                        </label>
+                                      </div>
+                                </div>
+                            </ul>
+                          </div>
                     </div>
 </div>
             <div class="row">
