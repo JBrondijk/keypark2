@@ -21,7 +21,7 @@ import { PracticalInformationComponent } from './page-visitor-info/practical-inf
 import { SubscriptionsComponent } from './page-visitor-info/subscriptions/subscriptions.component';
 import { TicketsReservationsComponent } from './page-visitor-info/tickets-reservations/tickets-reservations.component';
 import { YoutubeComponent } from './page-visitor-info/youtube/youtube.component';
-import { YakComponent } from './page-education/yak/yak.component';
+import { YakComponent } from './yak/yak.component';
 
 export const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: '/home'},
