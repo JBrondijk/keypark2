@@ -15,6 +15,7 @@ h2{
 .background {
     background-color: #bdf4fb;
     height: 100%;
+    padding-bottom: 1.5rem;
 }
 
 .page-section {
@@ -27,9 +28,137 @@ h2{
     margin-bottom: 25px;
 }
 
-.yak-logo{
-    height: 100px;
+@media (max-width: 767.98px) {
+    .page-section {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.intro-section {
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.intro-copy {
+    padding-right: 1.5rem;
+}
+
+.intro-logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yak-logo {
+    width: min(100%, 280px);
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+}
+
+@media (max-width: 991.98px) {
+    .intro-copy {
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .intro-logo-wrap {
+        justify-content: flex-start;
+    }
+
+    .yak-logo {
+        width: min(100%, 220px);
+    }
 }
 
 a {
-    color: #ff8203;}
+    color: #ff8203;
+}
+
+.fundraiser-table {
+    margin-top: 0.75rem;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.fundraiser-table thead th {
+    background-color: #ff8203;
+    color: #ffffff;
+    border: none;
+}
+
+.fundraiser-table thead tr {
+    background-color: #ff8203;
+}
+
+.fundraiser-table thead tr th:first-child {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.fundraiser-table thead tr th:last-child {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.fundraiser-table tbody tr:nth-child(even) {
+    background-color: #fff7ed;
+}
+
+.fundraiser-table td,
+.fundraiser-table th {
+    padding: 0.9rem 1rem;
+    vertical-align: middle;
+}
+
+.amount-pill {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff8203, #ff9f3f);
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(255, 130, 3, 0.25);
+    white-space: nowrap;
+}
+
+@media (max-width: 767.98px) {
+    .fundraiser-table thead {
+        display: none;
+    }
+
+    .fundraiser-table,
+    .fundraiser-table tbody,
+    .fundraiser-table tr,
+    .fundraiser-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .fundraiser-table tbody tr:nth-child(even),
+    .fundraiser-table tbody tr:nth-child(odd),
+    .fundraiser-table tr {
+        background-color: #ffffff;
+        border: 1px solid #f2e8dc;
+        border-radius: 16px;
+        padding: 0.75rem 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .fundraiser-table td {
+        border: none;
+        padding: 0.35rem 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .fundraiser-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: #ff8203;
+        flex: 0 0 40%;
+    }
+}
