@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +20,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},AnimalsService],
+  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }, AnimalsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
